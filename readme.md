@@ -21,6 +21,7 @@ then you can require
 
 as normal.
 
+- [Data Structure & Project Direction](docs/structure.md)
 - [The Formatter Repository](docs/repository.md)
 - Framework Integration
 -- [Laravel](docs/laravel.md)
