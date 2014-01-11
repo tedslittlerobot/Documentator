@@ -57,7 +57,7 @@ class Repository {
 
 		if ( ! $formatter instanceof OutputRendererInterface )
 		{
-			throw new \InvalidArgumentException('noooooo!');
+			throw new \InvalidArgumentException('The class "'.get_class($formatter).'" is not an instance of "Documentor\Contract\OutputRendererInterface". It needs to be, if you\'re going to format anything with it...');
 		}
 
 		$formatter->setOptions( $options ?: array() );
