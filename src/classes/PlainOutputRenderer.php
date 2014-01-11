@@ -2,6 +2,7 @@
 
 use Documentor\Contract\OutputRendererInterface;
 
+use Documentor\Contract\ContentInterface;
 use Documentor\Contract\DocumentInterface;
 use Documentor\Contract\ChapterInterface;
 use Documentor\Contract\SectionInterface;
@@ -66,6 +67,25 @@ class PlainOutputRenderer implements OutputRendererInterface {
 	public function getSectionOptions( SectionInterface $content )
 	{
 		return array_replace_recursive($this->defaultOptions, $this->sectionOptions, $content->getOptions());
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function render( ContentInterface $content)
+	{
+		if ( $content instanceof DocumentInterface )
+		{
+			return $this->renderDocument($content);
+		}
+		if ( $content instanceof ChapterInterface )
+		{
+			return $this->renderChapter($content);
+		}
+		if ( $content instanceof SectionInterface )
+		{
+			return $this->renderSection($content);
+		}
 	}
 
 	/**

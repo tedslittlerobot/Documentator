@@ -1,5 +1,6 @@
 <?php namespace Documentor\Contract;
 
+use Documentor\Contract\ContentInterface;
 use Documentor\Contract\DocumentInterface;
 use Documentor\Contract\ChapterInterface;
 use Documentor\Contract\SectionInterface;
@@ -7,6 +8,13 @@ use Documentor\Contract\SectionInterface;
 interface OutputRendererInterface {
 
 	/// RENDER ///
+
+	/**
+	 * Render the content - forward to the relavent render method
+	 * @param  ContentInterface $content
+	 * @return string
+	 */
+	public function render( ContentInterface $content );
 
 	/**
 	 * Render the document
