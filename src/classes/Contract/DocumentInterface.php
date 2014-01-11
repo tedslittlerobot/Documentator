@@ -14,4 +14,10 @@ interface DocumentInterface {
 	 */
 	public function getAuthor();
 
+	/**
+	 * Get the document's chapters
+	 * @return string
+	 */
+	public function getChapters();
+
 }

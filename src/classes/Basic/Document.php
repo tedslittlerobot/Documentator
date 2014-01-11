@@ -40,19 +40,9 @@ class Document implements DocumentInterface {
 		return $this->author;
 	}
 
-	/**
-	 * @inheritdoc
-	 */
-	public function getContent( OutputRendererInterface $renderer )
+	public function getChapters()
 	{
-		$output = '';
-
-		foreach ($this->chapters as $chapter)
-		{
-			$output .= $renderer->renderChapter( $chapter->getContent( $renderer ) );
-		}
-
-		return $output;
+		return $this->chapters;
 	}
 
 }
