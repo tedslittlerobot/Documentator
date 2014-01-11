@@ -1,4 +1,4 @@
-<?php namespace Tlr\Documentor;
+<?php namespace Documentor;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -18,7 +18,7 @@ class DocumentorServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('tlr/documentor');
+		$this->package('documentor/documentor');
 	}
 
 	/**
