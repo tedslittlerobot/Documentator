@@ -19,5 +19,8 @@
             "Documentor\\": "src/classes"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require-dev": {
+        "mockery/mockery": "dev-master"
+    }
 }
