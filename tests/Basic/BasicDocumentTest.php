@@ -20,7 +20,7 @@ class BasicDocumentTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testTitle()
 	{
-		$this->assertEquals( 'Title.', $this->document->getTitle() );
+		$this->assertEquals( 'Title', $this->document->getTitle() );
 
 		$this->document->title = 'woop';
 

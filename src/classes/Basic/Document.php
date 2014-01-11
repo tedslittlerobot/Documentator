@@ -10,13 +10,19 @@ class Document implements DocumentInterface {
 	 * The title
 	 * @var string
 	 */
-	public $title = 'Title.';
+	public $title = 'Title';
 
 	/**
 	 * The author
 	 * @var string
 	 */
 	public $author = 'Jeremy Christmas';
+
+	/**
+	 * The author
+	 * @var string
+	 */
+	public $intro = 'A Document.';
 
 	/**
 	 * Chapters
@@ -43,6 +49,11 @@ class Document implements DocumentInterface {
 	public function getChapters()
 	{
 		return $this->chapters;
+	}
+
+	public function getContent()
+	{
+		return $this->intro;
 	}
 
 }
