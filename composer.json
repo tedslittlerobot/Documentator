@@ -15,8 +15,8 @@
         "classmap": [
             "src/migrations"
         ],
-        "psr-0": {
-            "Documentor\\": "src/"
+        "psr-4": {
+            "Documentor": "src/Documentor"
         }
     },
     "minimum-stability": "dev"
