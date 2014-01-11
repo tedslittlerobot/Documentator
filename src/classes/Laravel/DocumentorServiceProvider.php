@@ -34,7 +34,7 @@ class DocumentorServiceProvider extends ServiceProvider {
 		$this->app->bind('Documentor\Contract\OutputRendererInterface', new PlainOutputRenderer);
 		$this->app->bindShared('Documentor\Repository', function()
 		{
-			return new Repository;
+			return new Repository( $this->app['config']->get('documents') );
 		});
 	}
 
