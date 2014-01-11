@@ -48,4 +48,16 @@ class BasicDocumentTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals( array(1, 2, 3), $this->document->getChapters() );
 	}
 
+	/**
+	 * Assert Content Get
+	 */
+	public function testGetContent()
+	{
+		$this->assertEquals( 'A Document.', $this->document->getContent() );
+
+		$this->document->intro = 'woop';
+
+		$this->assertEquals( 'woop', $this->document->getContent() );
+	}
+
 }
