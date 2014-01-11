@@ -1,6 +1,6 @@
 <?php namespace Documentor\Contract;
 
-interface ChapterInterface extends PrintableInterface {
+interface ChapterInterface extends ContentInterface {
 
 	/**
 	 * Get the Chapter Title

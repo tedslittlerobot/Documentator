@@ -1,8 +1,6 @@
 <?php namespace Documentor\Contract;
 
-use Documentor\Contract\OutputRendererInterface;
-
-interface PrintableInterface {
+interface ContentInterface {
 
 	/**
 	 * Get the content

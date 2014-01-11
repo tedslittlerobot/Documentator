@@ -1,6 +1,6 @@
 <?php namespace Documentor\Contract;
 
-interface DocumentInterface {
+interface DocumentInterface extends ContentInterface {
 
 	/**
 	 * Get the document Title
