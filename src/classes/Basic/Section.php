@@ -14,7 +14,7 @@ class Section implements SectionInterface {
 	/**
 	 * @inheritdoc
 	 */
-	public function getContent( OutputRendererInterface $renderer )
+	public function getContent()
 	{
 		return $this->content;
 	}

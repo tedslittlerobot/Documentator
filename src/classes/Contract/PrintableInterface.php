@@ -8,6 +8,6 @@ interface PrintableInterface {
 	 * Get the content
 	 * @return string
 	 */
-	// public function getContent( OutputRendererInterface $renderer );
+	public function getContent();
 
 }

@@ -28,16 +28,9 @@ class Chapter implements ChapterInterface {
 	/**
 	 * @inheritdoc
 	 */
-	public function getContent( OutputRendererInterface $renderer )
+	public function getContent()
 	{
-		$output = '';
-
-		foreach ($this->sections as $section)
-		{
-			$output .= $renderer->renderSection( $section->getContent( $renderer ) );
-		}
-
-		return $output;
+		return '';
 	}
 
 }
