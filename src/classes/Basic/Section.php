@@ -6,6 +6,12 @@ use Documentor\Contract\OutputRendererInterface;
 class Section implements SectionInterface {
 
 	/**
+	 * The section title
+	 * @var string
+	 */
+	public $title = 'Section Title';
+
+	/**
 	 * The Content
 	 * @var string
 	 */
@@ -17,6 +23,14 @@ class Section implements SectionInterface {
 	public function getContent()
 	{
 		return $this->content;
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function getTitle()
+	{
+		return $this->title;
 	}
 
 }

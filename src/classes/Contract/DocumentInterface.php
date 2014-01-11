@@ -3,12 +3,6 @@
 interface DocumentInterface extends ContentInterface {
 
 	/**
-	 * Get the document Title
-	 * @return string
-	 */
-	public function getTitle();
-
-	/**
 	 * Get the document Author
 	 * @return string
 	 */

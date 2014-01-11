@@ -27,4 +27,13 @@ class BasicSectionTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals( 'woop', $this->section->getContent() );
 	}
 
+	public function testGetTitle()
+	{
+		$this->assertEquals( 'Section Title', $this->section->getTitle() );
+
+		$this->section->title = 'woop';
+
+		$this->assertEquals( 'woop', $this->section->getTitle() );
+	}
+
 }

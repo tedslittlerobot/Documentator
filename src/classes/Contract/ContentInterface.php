@@ -3,6 +3,12 @@
 interface ContentInterface {
 
 	/**
+	 * Get the content title
+	 * @return string
+	 */
+	public function getTitle();
+
+	/**
 	 * Get the content
 	 * @return string
 	 */
