@@ -16,11 +16,15 @@ class TestBasicSection extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Assert that the renderer has been assigned properly
+	 * Test recursive section renders
 	 */
-	public function testDescartes()
+	public function testGetContent()
 	{
-		$this->assertTrue( true );
+		$this->assertEquals( 'Bla Bla Bla', $this->section->getContent( $this->output ) );
+
+		$this->section->content = 'woop';
+
+		$this->assertEquals( 'woop', $this->section->getContent( $this->output ) );
 	}
 
 }

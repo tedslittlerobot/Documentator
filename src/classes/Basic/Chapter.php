@@ -6,10 +6,24 @@ use Documentor\Contract\OutputRendererInterface;
 class Chapter implements ChapterInterface {
 
 	/**
+	 * The title
+	 * @var string
+	 */
+	public $title = 'Title.';
+
+	/**
 	 * Sections
 	 * @var array
 	 */
 	public $sections = array();
+
+	/**
+	 * @inheritdoc
+	 */
+	public function getTitle()
+	{
+		return $this->title;
+	}
 
 	/**
 	 * @inheritdoc

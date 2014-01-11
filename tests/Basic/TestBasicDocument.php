@@ -16,11 +16,36 @@ class TestBasicDocument extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Assert that the renderer has been assigned properly
+	 * Assert title getter
 	 */
-	public function testDescartes()
+	public function testTitle()
 	{
-		$this->assertTrue( true );
+		$this->assertEquals( 'Title.', $this->document->getTitle() );
+
+		$this->document->title = 'woop';
+
+		$this->assertEquals( 'woop', $this->document->getTitle() );
+	}
+
+	/**
+	 * Assert author getter
+	 */
+	public function testAuthor()
+	{
+		$this->assertEquals( 'Jeremy Christmas', $this->document->getAuthor() );
+
+		$this->document->author = 'Steven Hawkins';
+
+		$this->assertEquals( 'Steven Hawkins', $this->document->getAuthor() );
+	}
+
+	/**
+	 * Assert Chapter Get
+	 */
+	public function testGetChapters()
+	{
+		$this->document->chapters = array(1, 2, 3);
+		$this->assertEquals( array(1, 2, 3), $this->document->getChapters() );
 	}
 
 }

@@ -16,11 +16,24 @@ class TestBasicChapter extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Assert that the renderer has been assigned properly
+	 * Assert title getter
 	 */
-	public function testDescartes()
+	public function testTitle()
 	{
-		$this->assertTrue( true );
+		$this->assertEquals( 'Title.', $this->chapter->getTitle() );
+
+		$this->chapter->title = 'woop';
+
+		$this->assertEquals( 'woop', $this->chapter->getTitle() );
 	}
 
+	/**
+	 * Test recursive section renders
+	 *
+	 * @TODO mock sections and test them
+	 */
+	public function testGetContent()
+	{
+		$this->assertEquals( '', $this->chapter->getContent( $this->output ) );
+	}
 }
