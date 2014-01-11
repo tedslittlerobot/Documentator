@@ -76,8 +76,8 @@ class PlainOutputRenderer implements OutputRendererInterface {
 		$output = '';
 
 		$output .= $document->getTitle().PHP_EOL;
-
-		$output .= "By {$document->getAuthor()}".PHP_EOL.PHP_EOL.PHP_EOL;
+		$output .= "By {$document->getAuthor()}".PHP_EOL.PHP_EOL;
+		$output .= $document->getContent().PHP_EOL.PHP_EOL.PHP_EOL;
 
 		foreach ($document->getChapters() as $chapter)
 		{
@@ -92,7 +92,17 @@ class PlainOutputRenderer implements OutputRendererInterface {
 	 */
 	public function renderChapter( ChapterInterface $chapter, $options = array() )
 	{
-		return '';
+		$output = '';
+
+		$output .= $chapter->getTitle().PHP_EOL.PHP_EOL;
+		$output .= $chapter->getContent().PHP_EOL.PHP_EOL;
+
+		foreach ($chapter->getSections() as $section)
+		{
+			$output .= $this->renderSection( $section );
+		}
+
+		return $output;
 	}
 
 	/**
@@ -100,7 +110,11 @@ class PlainOutputRenderer implements OutputRendererInterface {
 	 */
 	public function renderSection( SectionInterface $section, $options = array() )
 	{
-		return '';
+		$output = '';
+
+		$output .= $section->getContent();
+
+		return $output;
 	}
 
 }

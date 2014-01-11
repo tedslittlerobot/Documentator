@@ -14,31 +14,47 @@ class PlainOutputRendererTest extends \PHPUnit_Framework_TestCase {
 		m::close();
 	}
 
+	/**
+	 * Test document rendering
+	 */
 	public function testRenderDocument()
 	{
 		$document = m::mock('Documentor\Contract\DocumentInterface');
 		$document->shouldReceive('getTitle')->once()->andReturn('The Title');
 		$document->shouldReceive('getAuthor')->once()->andReturn('Jeremy Kyle');
+		$document->shouldReceive('getContent')->once()->andReturn('Intro');
 		$document->shouldReceive('getChapters')->once()->andReturn(array());
 
-		$this->assertEquals( "The Title\nBy Jeremy Kyle\n\n\n", $this->output->renderDocument( $document ) );
+		$this->assertEquals( "The Title\nBy Jeremy Kyle\n\nIntro\n\n\n", $this->output->renderDocument( $document ) );
 	}
 
+	/**
+	 * Test chapter rendering
+	 */
 	public function testRenderChapter()
 	{
 		$chapter = m::mock('Documentor\Contract\ChapterInterface');
+		$chapter->shouldReceive('getTitle')->once()->andReturn('Chapter Title');
+		$chapter->shouldReceive('getContent')->once()->andReturn('  Intro');
+		$chapter->shouldReceive('getSections')->once()->andReturn(array());
 
-		// $this->assertEquals( '', $this->output->renderChapter( $chapter ) );
+		$this->assertEquals( "Chapter Title\n\n  Intro\n\n", $this->output->renderChapter( $chapter ) );
 	}
 
+	/**
+	 * Test section rendering
+	 */
 	public function testRenderSection()
 	{
 		$section = m::mock('Documentor\Contract\SectionInterface');
+		$section->shouldReceive('getContent')->once()->andReturn('woop');
 
-		// $this->assertEquals( '', $this->output->renderSection( $section ) );
+		$this->assertEquals( 'woop', $this->output->renderSection( $section ) );
 	}
 
-
+	/**
+	 * Test the options accessors
+	 */
 	protected function recursiveOptions( $sector, $content )
 	{
 		$override = array('three' => 'henry');
@@ -62,6 +78,9 @@ class PlainOutputRendererTest extends \PHPUnit_Framework_TestCase {
 			$this->assertEquals( array_replace_recursive($three, $one, $override), $this->output->$method( $content ) );
 	}
 
+	/**
+	 * Test document option accessor
+	 */
 	public function testGetDocumentOptions()
 	{
 		$content = m::mock('Documentor\Contract\DocumentInterface');
@@ -69,6 +88,9 @@ class PlainOutputRendererTest extends \PHPUnit_Framework_TestCase {
 		$this->recursiveOptions( 'document', $content );
 	}
 
+	/**
+	 * Test document option accessor
+	 */
 	public function testGetChapterOptions()
 	{
 		$content = m::mock('Documentor\Contract\ChapterInterface');
@@ -76,6 +98,9 @@ class PlainOutputRendererTest extends \PHPUnit_Framework_TestCase {
 		$this->recursiveOptions( 'chapter', $content );
 	}
 
+	/**
+	 * Test document option accessor
+	 */
 	public function testGetSectionOptions()
 	{
 		$content = m::mock('Documentor\Contract\SectionInterface');
