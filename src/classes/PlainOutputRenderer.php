@@ -77,7 +77,7 @@ class PlainOutputRenderer implements OutputRendererInterface {
 
 		$output .= $document->getTitle().PHP_EOL;
 
-		$output .= "By {$document->getAuthor()}".PHP_EOL;
+		$output .= "By {$document->getAuthor()}".PHP_EOL.PHP_EOL.PHP_EOL;
 
 		foreach ($document->getChapters() as $chapter)
 		{

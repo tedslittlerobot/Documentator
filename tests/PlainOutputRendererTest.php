@@ -21,7 +21,7 @@ class PlainOutputRendererTest extends \PHPUnit_Framework_TestCase {
 		$document->shouldReceive('getAuthor')->once()->andReturn('Jeremy Kyle');
 		$document->shouldReceive('getChapters')->once()->andReturn(array());
 
-		$this->assertEquals( 'The Title'.PHP_EOL.'By Jeremy Kyle'.PHP_EOL, $this->output->renderDocument( $document ) );
+		$this->assertEquals( "The Title\nBy Jeremy Kyle\n\n\n", $this->output->renderDocument( $document ) );
 	}
 
 	public function testRenderChapter()
