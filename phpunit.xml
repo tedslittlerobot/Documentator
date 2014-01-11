@@ -11,8 +11,18 @@
          syntaxCheck="false"
 >
     <testsuites>
-        <testsuite name="Package Test Suite">
+        <testsuite name="Documentor Tests">
             <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
+
+    <filter>
+      <whitelist>
+        <directory suffix=".php">./src/classes/</directory>
+        <exclude>
+            <file>./src/classes/Laravel/DocumentorServiceProvider.php</file>
+        </exclude>
+      </whitelist>
+    </filter>
+
 </phpunit>
