@@ -2,7 +2,7 @@
 
 use Mockery as m;
 
-class TestBasicDocument extends \PHPUnit_Framework_TestCase {
+class BasicDocumentTest extends \PHPUnit_Framework_TestCase {
 
 	public function setUp()
 	{
