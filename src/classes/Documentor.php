@@ -45,7 +45,7 @@ class Documentor {
 	 */
 	public function render( DocumentInterface $document )
 	{
-		return $this->output->renderDocument( $document->getContent( $this->output ) );
+		return $this->output->renderDocument( $document );
 	}
 
 }

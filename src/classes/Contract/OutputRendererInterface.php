@@ -1,7 +1,10 @@
 <?php namespace Documentor\Contract;
 
-interface OutputRendererInterface {
+use Documentor\Contract\DocumentInterface;
+use Documentor\Contract\ChapterInterface;
+use Documentor\Contract\SectionInterface;
 
+interface OutputRendererInterface {
 
 	/// RENDER ///
 
@@ -11,7 +14,7 @@ interface OutputRendererInterface {
 	 * @param  array  $options
 	 * @return string
 	 */
-	public function renderDocument( $content, $options = array() );
+	public function renderDocument( DocumentInterface $content, $options = array() );
 
 	/**
 	 * Render the chapter
@@ -19,7 +22,7 @@ interface OutputRendererInterface {
 	 * @param  array  $options
 	 * @return string
 	 */
-	public function renderChapter( $content, $options = array() );
+	public function renderChapter( ChapterInterface $content, $options = array() );
 
 	/**
 	 * Render the section
@@ -27,30 +30,30 @@ interface OutputRendererInterface {
 	 * @param  array  $options
 	 * @return string
 	 */
-	public function renderSection( $content, $options = array() );
+	public function renderSection( SectionInterface $content, $options = array() );
 
 
 	///  OPTIONS  ///
 
 	/**
 	 * Get the render options for the document
-	 * @param  array  $options   optional overrides
+	 * @param  Documentor\Contract\DocumentInterface  $document
 	 * @return array
 	 */
-	public function getDocumentOptions( $options = array() );
+	public function getDocumentOptions( DocumentInterface $content );
 
 	/**
 	 * Get the render options for the chapter
-	 * @param  array  $options   optional overrides
+	 * @param  Documentor\Contract\ChapterInterface  $chapter
 	 * @return array
 	 */
-	public function getChapterOptions( $options = array() );
+	public function getChapterOptions( ChapterInterface $content );
 
 	/**
 	 * Get the render options for the section
-	 * @param  array  $options   optional overrides
+	 * @param  Documentor\Contract\SectionInterface  $section
 	 * @return array
 	 */
-	public function getSectionOptions( $options = array() );
+	public function getSectionOptions( SectionInterface $content );
 
 }
