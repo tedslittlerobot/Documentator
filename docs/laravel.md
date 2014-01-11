@@ -1,5 +1,5 @@
-Laravel
-=======
+Documentor:: Laravel
+====================
 
 #### Setup
 
