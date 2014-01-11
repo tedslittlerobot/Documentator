@@ -21,6 +21,7 @@
         <directory suffix=".php">./src/classes/</directory>
         <exclude>
             <file>./src/classes/Laravel/DocumentorServiceProvider.php</file>
+            <directory>./src/classes/Laravel/Facades/</directory>
         </exclude>
       </whitelist>
     </filter>
