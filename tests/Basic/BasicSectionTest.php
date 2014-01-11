@@ -20,11 +20,11 @@ class BasicSectionTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testGetContent()
 	{
-		$this->assertEquals( 'Bla Bla Bla', $this->section->getContent( $this->output ) );
+		$this->assertEquals( 'Bla Bla Bla', $this->section->getContent() );
 
 		$this->section->content = 'woop';
 
-		$this->assertEquals( 'woop', $this->section->getContent( $this->output ) );
+		$this->assertEquals( 'woop', $this->section->getContent() );
 	}
 
 }

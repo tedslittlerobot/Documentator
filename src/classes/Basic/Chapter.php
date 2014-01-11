@@ -11,6 +11,8 @@ class Chapter implements ChapterInterface {
 	 */
 	public $title = 'Title.';
 
+	public $content = '  Intro';
+
 	/**
 	 * Sections
 	 * @var array
@@ -30,7 +32,7 @@ class Chapter implements ChapterInterface {
 	 */
 	public function getContent()
 	{
-		return '';
+		return $this->content;
 	}
 
 }

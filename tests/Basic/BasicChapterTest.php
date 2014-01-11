@@ -34,6 +34,6 @@ class BasicChapterTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testGetContent()
 	{
-		$this->assertEquals( '', $this->chapter->getContent( $this->output ) );
+		$this->assertEquals( '  Intro', $this->chapter->getContent() );
 	}
 }
