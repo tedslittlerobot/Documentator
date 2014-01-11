@@ -1,6 +1,8 @@
-<?php namespace Documentor;
+<?php namespace Documentor\Laravel;
 
 use Illuminate\Support\ServiceProvider;
+
+use Documentor\Laravel\Repository;
 use Documentor\PlainOutputRenderer;
 
 class DocumentorServiceProvider extends ServiceProvider {
@@ -30,6 +32,10 @@ class DocumentorServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		$this->app->bind('Documentor\Contract\OutputRendererInterface', new PlainOutputRenderer);
+		$this->app->bindShared('Documentor\Repository', function()
+		{
+			return new Repository;
+		});
 	}
 
 	/**
