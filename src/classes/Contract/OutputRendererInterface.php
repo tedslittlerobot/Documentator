@@ -14,7 +14,7 @@ interface OutputRendererInterface {
 	 * @param  array  $options
 	 * @return string
 	 */
-	public function renderDocument( DocumentInterface $content, $options = array() );
+	public function renderDocument( DocumentInterface $content );
 
 	/**
 	 * Render the chapter
@@ -22,7 +22,7 @@ interface OutputRendererInterface {
 	 * @param  array  $options
 	 * @return string
 	 */
-	public function renderChapter( ChapterInterface $content, $options = array() );
+	public function renderChapter( ChapterInterface $content );
 
 	/**
 	 * Render the section
@@ -30,7 +30,7 @@ interface OutputRendererInterface {
 	 * @param  array  $options
 	 * @return string
 	 */
-	public function renderSection( SectionInterface $content, $options = array() );
+	public function renderSection( SectionInterface $content );
 
 
 	///  OPTIONS  ///

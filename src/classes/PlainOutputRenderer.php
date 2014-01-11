@@ -71,7 +71,7 @@ class PlainOutputRenderer implements OutputRendererInterface {
 	/**
 	 * @inheritdoc
 	 */
-	public function renderDocument( DocumentInterface $document, $options = array() )
+	public function renderDocument( DocumentInterface $document )
 	{
 		$output = '';
 
