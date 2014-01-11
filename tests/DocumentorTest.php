@@ -2,7 +2,7 @@
 
 use Mockery as m;
 
-class TestDocumentor extends \PHPUnit_Framework_TestCase {
+class DocumentorTest extends \PHPUnit_Framework_TestCase {
 
 	public function setUp()
 	{
@@ -31,8 +31,7 @@ class TestDocumentor extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testRender()
 	{
-		$this->document->shouldReceive('getContent')->once()->with( $this->output )->andReturn('foo');
-		$this->output->shouldReceive('renderDocument')->once()->with('foo')->andReturn('woop');
+		$this->output->shouldReceive('renderDocument')->once()->with( $this->document )->andReturn('woop');
 
 		$this->assertEquals( 'woop', $this->documentor->render( $this->document ) );
 	}
