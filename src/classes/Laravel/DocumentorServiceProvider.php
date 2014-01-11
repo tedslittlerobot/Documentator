@@ -1,6 +1,7 @@
 <?php namespace Documentor;
 
 use Illuminate\Support\ServiceProvider;
+use Documentor\PlainOutputRenderer;
 
 class DocumentorServiceProvider extends ServiceProvider {
 
@@ -28,7 +29,7 @@ class DocumentorServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app->bind('Documentor\Contract\OutputRendererInterface', new PlainOutputRenderer);
 	}
 
 	/**
