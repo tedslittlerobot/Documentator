@@ -35,4 +35,12 @@ class Chapter implements ChapterInterface {
 		return $this->content;
 	}
 
+	/**
+	 * @inheritdoc
+	 */
+	public function getSections()
+	{
+		return array();
+	}
+
 }
