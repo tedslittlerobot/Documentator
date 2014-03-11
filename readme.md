@@ -7,13 +7,14 @@ To install on composer...
 
 Until the package is on packagist, you will have to add the following to the composer.json file
 
-    :::json
-    "repositories": [
-    	{
-    		"type": "git",
-    		"url": "git@bitbucket.org/stef-horner/documentor.git"
-    	}
-    ],
+```json
+"repositories": [
+	{
+		"type": "git",
+		"url": "git@github.com:tedslittlerobot/Documentator.git"
+	}
+],
+```
 
 then you can require
 
