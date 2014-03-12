@@ -16,7 +16,7 @@
             "src/migrations"
         ],
         "psr-4": {
-            "Documentor\\": "src/classes"
+            "Documentor\\": "src"
         }
     },
     "minimum-stability": "dev",
