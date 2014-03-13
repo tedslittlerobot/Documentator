@@ -1,5 +1,7 @@
-Documentor
-==========
+Documentator
+============
+
+> A Document Formatting Library for PHP
 
 ### Composer
 
