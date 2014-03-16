@@ -20,6 +20,12 @@ class Chapter implements ChapterInterface {
 	public $sections = array();
 
 	/**
+	 * Render Options
+	 * @var string
+	 */
+	public $options = array();
+
+	/**
 	 * @inheritdoc
 	 */
 	public function getTitle()
@@ -41,6 +47,14 @@ class Chapter implements ChapterInterface {
 	public function getSections()
 	{
 		return array();
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function getOptions()
+	{
+		return $this->options;
 	}
 
 }

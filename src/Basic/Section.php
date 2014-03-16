@@ -18,6 +18,12 @@ class Section implements SectionInterface {
 	public $content = 'Bla Bla Bla';
 
 	/**
+	 * Render Options
+	 * @var string
+	 */
+	public $options = array();
+
+	/**
 	 * @inheritdoc
 	 */
 	public function getContent()
@@ -31,6 +37,14 @@ class Section implements SectionInterface {
 	public function getTitle()
 	{
 		return $this->title;
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function getOptions()
+	{
+		return $this->options;
 	}
 
 }

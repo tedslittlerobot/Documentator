@@ -31,6 +31,12 @@ class Document implements DocumentInterface {
 	public $chapters = array();
 
 	/**
+	 * Render Options
+	 * @var string
+	 */
+	public $options = array();
+
+	/**
 	 * @inheritdoc
 	 */
 	public function getTitle()
@@ -46,14 +52,28 @@ class Document implements DocumentInterface {
 		return $this->author;
 	}
 
+	/**
+	 * @inheritdoc
+	 */
 	public function getChapters()
 	{
 		return $this->chapters;
 	}
 
+	/**
+	 * @inheritdoc
+	 */
 	public function getContent()
 	{
 		return $this->intro;
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function getOptions()
+	{
+		return $this->options;
 	}
 
 }

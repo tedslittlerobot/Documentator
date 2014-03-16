@@ -14,4 +14,9 @@ interface ContentInterface {
 	 */
 	public function getContent();
 
+	/**
+	 * Get the content
+	 * @return string
+	 */
+	public function getOptions();
 }
