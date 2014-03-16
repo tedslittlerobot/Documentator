@@ -14,7 +14,7 @@
     },
     "autoload": {
         "classmap": [
-            "src/migrations"
+            "laravel/migrations"
         ],
         "psr-4": {
             "Documentor\\": "src"
