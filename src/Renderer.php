@@ -7,7 +7,7 @@ use Documentor\Contract\DocumentInterface;
 use Documentor\Contract\ChapterInterface;
 use Documentor\Contract\SectionInterface;
 
-class OutputRenderer implements OutputRendererInterface {
+abstract class Renderer implements OutputRendererInterface {
 
 	/**
 	 * The default Options
