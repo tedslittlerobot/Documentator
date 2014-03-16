@@ -19,4 +19,17 @@ interface ContentInterface {
 	 * @return string
 	 */
 	public function getOptions();
+
+	/**
+	 * Get the prologue copy for the content
+	 * @return string
+	 */
+	public function getPrologue();
+
+	/**
+	 * Get the prologue copy for the content
+	 * @return string
+	 */
+	public function getEpilogue();
+
 }

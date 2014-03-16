@@ -18,6 +18,18 @@ class Section implements SectionInterface {
 	public $content = 'Bla Bla Bla';
 
 	/**
+	 * The Intro Text
+	 * @var string
+	 */
+	public $prologue = '';
+
+	/**
+	 * The Outro Text
+	 * @var string
+	 */
+	public $epilogue = '';
+
+	/**
 	 * Render Options
 	 * @var string
 	 */
@@ -45,6 +57,22 @@ class Section implements SectionInterface {
 	public function getOptions()
 	{
 		return $this->options;
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function getPrologue()
+	{
+		return $this->prologue;
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function getEpilogue()
+	{
+		return $this->epilogue;
 	}
 
 }

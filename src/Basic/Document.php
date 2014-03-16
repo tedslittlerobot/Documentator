@@ -37,6 +37,18 @@ class Document implements DocumentInterface {
 	public $options = array();
 
 	/**
+	 * The Intro Text
+	 * @var string
+	 */
+	public $prologue = '';
+
+	/**
+	 * The Outro Text
+	 * @var string
+	 */
+	public $epilogue = '';
+
+	/**
 	 * @inheritdoc
 	 */
 	public function getTitle()
@@ -74,6 +86,22 @@ class Document implements DocumentInterface {
 	public function getOptions()
 	{
 		return $this->options;
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function getPrologue()
+	{
+		return $this->prologue;
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function getEpilogue()
+	{
+		return $this->epilogue;
 	}
 
 }
