@@ -18,10 +18,10 @@
 
     <filter>
       <whitelist>
-        <directory suffix=".php">./src/classes/</directory>
+        <directory suffix=".php">./src/</directory>
         <exclude>
-            <file>./src/classes/Laravel/DocumentorServiceProvider.php</file>
-            <directory>./src/classes/Laravel/Facades/</directory>
+            <file>./src/Laravel/DocumentorServiceProvider.php</file>
+            <directory>./src/Laravel/Facades/</directory>
         </exclude>
       </whitelist>
     </filter>
